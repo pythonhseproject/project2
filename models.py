@@ -1,5 +1,5 @@
 from keras.models import Model
-from keras.layers import Input, concatenate, Conv2D, Conv2DTranspose, MaxPooling2D, ZeroPadding2D, Dense, Flatten
+from keras.layers import Input, Conv2D, MaxPooling2D, Dense, Flatten
 from keras import backend as keras
 
 class modelsClass(object):
