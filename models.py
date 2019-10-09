@@ -9,7 +9,6 @@ class modelsClass(object):
         self.img_rows = img_rows
         self.img_cols = img_cols
 
-    
     def cnn(self):
         input_image = Input((self.img_rows, self.img_cols, 3))
 
