@@ -12,13 +12,7 @@ class modelsClass(object):
     
     def cnn(self):
         input_image = Input((self.img_rows, self.img_cols, 3))
-        # (train_images, train_labels), (test_images, test_labels) = datasets.cifar10.load_data()
 
-        # Normalize pixel values to be between 0 and 1
-        # ValueError: Shapes (576, 64) and (1024, 64) are incompatibleinput_image = input_image / 255.0
-        
-        # conv1 = Conv2D(64, (3, 3), activation='relu', padding='same')(input_blurred)
-        # model = models.Sequential()
         conv1 = Conv2D(32, (3, 3), activation='relu')(input_image)
         pool1 = MaxPooling2D((2, 2))(conv1)
         
@@ -41,15 +35,7 @@ class modelsClass(object):
         dense1 = Dense(128, activation='relu')(flatten0)
         dense2 = Dense(10, activation='softmax')(dense1)
 
-        
-        
-        # input_image = Input((self.img_rows, self.img_cols,3))
-        # input_dim = self.img_rows*self.img_cols*3
-        # 
-        # dense1 = Dense(units=64, activation='relu', input_dim=input_dim)(input_image)
-        # dense2 = Dense(units=10, activation='softmax')(dense1)
-        
-        # model = Model(inputs=input_image, outputs=dense2)
+
         model = Model(inputs=input_image, outputs=dense2)
         return model
     
