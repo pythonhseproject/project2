@@ -25,3 +25,7 @@ python cnn.py --input data/cnn
 ```
 where `data/cnn` is direction with input images and you can change it. The model outputs what is on the image.  
 Classes are: 'airplane', 'automobile', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse', 'ship', 'truck'
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
