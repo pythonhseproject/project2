@@ -1,6 +1,6 @@
 import os, os.path, errno
 import argparse
-from PIL import Image
+from PIL import Image, ImageOps
 import numpy as np
 from keras.models import Model
 from keras.preprocessing.image import array_to_img
@@ -24,8 +24,9 @@ def main():
     for fname in image_names:
 
         img = Image.open(image_path + fname)
-        img_np = (1./255)*np.array(img)[:,:,0]
-
+        img = ImageOps.fit(img, (28, 28))
+        img = ImageOps.grayscale(img)
+        img_np = (1./255)*np.array(img)
         width, height = img.size
         models = modelsClass(height,width)
         model = models.classification()

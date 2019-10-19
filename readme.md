@@ -9,7 +9,7 @@ The program demands numpy, keras and tensorflow
 ## How to use
 
 ### First model  
-The first model uses dense layers. It takes grayscale 28*28 images. It's trained on fashion MNIST dataset. You can run it by
+The first model uses dense layers. It's trained on fashion MNIST dataset. You can run it by
 
 ```
 python classification.py --input data/classification
